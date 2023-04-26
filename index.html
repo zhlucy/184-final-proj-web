@@ -1,100 +1,19 @@
 <html>
-    <h1>Final Project Proposal: Ice Ice Baby</h1>
+    <h1>Final Project Milestone: Ice Ice Baby</h1>
     <h3>Alex Schedel, Lucy Lu, Olivia Huang, Eddy Byun</h3>
+
+    <h2>Status Report</h2>
+    <embed src="media/milestone_status_report.pdf" type="application/pdf" width="100%" height="600px" />
+    
+    <h2>Video</h2>
     <p>
-        The project simulates fluid movement and state transitions. In particular, the project will simulate moving water solidifying into ice over time. This can be achieved using a modified particle based fluid simulation which will incorporate a spring system similar to the one implemented in project 4.
+      If the video doesn't properly display, try opening this in chrome.
     </p>
-
-    <h2>Problem Description</h2>
-    <p>
-        Fluid simulation: 
-        <p style="margin-left: 25px;">
-            We want to simulate moving water realistically. It should generate waves as a result of external forces (such as wind). There could be droplets and splashes, but in general the water should “move together,” meaning there shouldn’t be noticeable regions of water with empty space in between.
-        </p>
-        <p style="margin-left: 25px;">
-            We will use a position based fluid simulation as outlined in <a href="https://mmacklin.com/pbf_sig_preprint.pdf">this paper</a>. This differs from the grid based approach to simulating fluids we saw in lecture, but having individual particles will allow us to add springs and “freeze” the particles in place later.
-        </p>
-        State transition:
-        <p style="margin-left: 25px;">
-            We want to simulate the water freezing into ice. As the water freezes, the particles should become more viscous so that they transform from free flow fluid to rigid solid object.
-        </p>
-        <p style="margin-left: 25px;">
-            To simulate the water freezing into ice we will add springs into our fluid particles as a simulated “temperature” decreases. These springs will become increasingly rigid and inflexible as the temperature drops until they allow for no movement at all.
-        </p>
-
-        <p>
-            Real world fluids do not stay in one state all the time but change between states based on factors like humidity and temperature. By modeling state transitions, we can create a simulation that better emulates real world physics. Additionally this will provide us with an opportunity to blend and incorporate multiple simulation models into one in a novel way.
-        </p>
-
-        <p>
-            The most challenging component will be the state transition and the case where part of the system is ice, part of it is water, and part of it is in-between states. This is because not only will we have to potentially manage multiple simulation models (the particle based fluid sim as well as the spring sim), but we will have to balance and blend these models together all while keeping the simulation realistic looking. 
-        </p>
-    </p>
-
-    <h2>Goals and Deliverables</h2>
-    <p>
-        We will create a textured gif that demonstrates water transition states as temperature decreases when water is moving at various intensities. This means there will be a gif for stationary water, for choppy water, as well as for splashes. We will show the gradual transition as the water goes from room temperature to partially frozen to completely frozen.
-    </p>
-    <p>
-        To measure the quality of our system, we will begin by rendering stripped down and untextured water simulation, in other words, we will first do a simulation just with the individual particles (as is shown in the paper we intend on modeling from) to first verify the simulation works properly and realistically. From there we will implement the spring system, and finally texture the water so that it looks like more than just a bunch of beads.
-    </p>
-    <p>
-        Depending on how quickly we are able to get the basic project running, we have identified a number of stretch goals we may choose to pursue. These include transitioning the other way, i.e. from ice to water. This would involve adding motion into our system rather than simply removing it, as well as accounting for things like water droplets coming off of melding ice. We are also considering freezing parts of the scene dynamically, meaning that instead of the whole of the water freezing at the same rate, parts could freeze at varying intervals. Additionally, we might experiment with additional texturing techniques for the final water simulation. A final goal is additional state transitions, for example, turning the water into steam, which would involve an additional model.
-    </p>
-
-    <h2>Schedule</h2>
-    Week 1: Brainstorm, Structure, and Begin Implementation
-    <ul>
-        <li>Read all relevant papers and be able to digest the content.</li>
-        <li>Ensure all team members have completed the first four parts of project 4, as they will be very relevant to our implementation.</li>
-        <li>Research techniques for creating our renders. The simulation will likely be too expensive to run in real time, so we will need to incorporate external programs to create high quality smooth renders.</li>
-        <li>Create a plan for structuring the code i.e. what existing code base will we start with, what classes and functions will we need.</li>
-        <li>Implement particle based fluid simulation and create some proof of concept renders. This will likely be the largest task of the project and may take more than a week.</li>
-    </ul>
-
-    Week 2: Continue Working on Implementation
-    <ul>
-        <li>Depending on how long it takes to implement the fluid sim, we may still be working on that come week 2.</li>
-        <li>Incorporate logic from project 4 into the project in the form of a spring based system which will help “freeze” are particles.</li>
-        <li>Fine tune parameters to ensure that simulation looks realistic. This will include finding the best way to determine constants and models for temperature simulation.</li>
-    </ul>
-
-    Week 3: Fine Tuning and Renders
-    <ul>
-        <li>Continuing working to ensure that the simulation looks reasonably realistic and well designed.</li>
-        <li>Consider if we have the time to implement any of our stretch goals.</li>
-        <li>Begin creating final renders.</li>
-    </ul>
-
-    Week 4: Finishing Up
-    <ul>
-        <li>Finish on any potential stretch goals.</li>
-        <li>Write final paper.</li>
-        <li>Finish renders.</li>
-        <li>Create demonstration video.</li>
-    </ul>
-
-    <h2>Resources</h2>
-    <ul>
-        <li>https://mmacklin.com/pbf_sig_preprint.pdf</li>
-            <ul>
-                <li>Main paper to reference for position and particle based fluid simulation.</li>
-            </ul>
-        <li>https://onlinelibrary.wiley.com/doi/10.1002/cav.1767</li>
-            <ul>
-                <li>Provides a technique for growing ice depending on the movement of water and its direction.</li>
-            </ul>
-        <li>https://www.cs.unc.edu/~geom/ICE/small.pdf</li>
-            <ul>
-                <li>Research paper that presents a way to simulate ice crystal growth using physics.</li>
-            </ul>
-        <li>https://www.semanticscholar.org/paper/Particle-based-ice-freezing-simulation-Miao-Xiao/2bb24b56afcaf7eddb670d7d8a1728c085071011</li>
-        <ul>
-            <li>Provides an algorithm for when particles freeze, and what variables to consider in that process.</li>
-        </ul>
-        <li>Use Project 4 as a starting point for adding in springs</li>
-        <li>Hive machines for rendering</li>
-    </ul>
-
-
+    <video width="500" height="400" controls>
+      <source src="media/milestone_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    
+    <h2>Slides</h2>
+    <a href="https://docs.google.com/presentation/d/1xrUIWcrON0QNPtQSqEqd1_Z6E6zD1rTl8EQKEJa0e8E/edit?usp=sharing">Link to presentation slides</a>
 </html>
